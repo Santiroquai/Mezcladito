@@ -9,14 +9,14 @@ import TeamGenerator from './components/TeamGenerator.vue'
   <div class="bg-green-600 relative min-h-screen overflow-x-hidden">
 
     <div
-      class="absolute inset-0 bg-[url('/grass.jpg')] bg-cover bg-center blur-sm">
+      class="absolute inset-0 bg-[url('/grass.jpg')] bg-cover bg-center bg-fixed blur-sm">
     </div>
     
     <div class="relative p-4 md:p-6">
 
       <div class="max-w-screen-xl mx-auto">
 
-        <header class="mb-6 mt-3 md:mb-8 text-center">
+        <header class="mb-4 mt-3 md:mb-8 text-center">
           <h1 class="text-2xl md:text-3xl font-bold text-white mb-2">⚽ Mezcladito ⚽</h1>
         </header>
 

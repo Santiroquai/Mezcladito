@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white rounded-xl shadow-sm p-6 mb-16">
+  <div class="bg-white rounded-xl shadow-sm p-6 mb-12">
     <h2 class="text-xl font-semibold text-gray-800 mb-4">Sortear Equipos</h2>
 
     <button
@@ -39,6 +39,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="mb-2 text-center text-white">
+      ©2025 Santiroquai, Inc.
   </div>
 </template>
 

@@ -1,8 +1,15 @@
 <script setup>
 import { ref } from 'vue'
+import { storeToRefs } from 'pinia' // Importación esencial
 import { usePlayersStore } from '../stores/players'
 
-const { players, selectedPlayers, availablePlayers, togglePlayer, addPlayer } = usePlayersStore()
+// Primero obtenemos la instancia completa del store
+const store = usePlayersStore()
+
+// Luego extraemos lo necesario manteniendo reactividad
+const { players, selectedPlayers, availablePlayers } = storeToRefs(store)
+const { togglePlayer, addPlayer } = store // Las acciones no necesitan storeToRefs
+
 const newPlayerName = ref('')
 
 const addNewPlayer = () => {
@@ -11,13 +18,30 @@ const addNewPlayer = () => {
     newPlayerName.value = ''
   }
 }
-</script>  
+</script>
 
 <template>
   <div class="bg-white rounded-lg shadow-sm p-2 sm:p-4">
+    
     <div class="flex justify-between items-center mb-2">
       <h2 class="text-base sm:text-lg font-semibold text-gray-800">Jugadores</h2>
-      <span class="text-xs text-gray-500">{{ availablePlayers.length }} disponibles</span>
+      <div class="flex items-center gap-1">
+        <span class="text-xs text-gray-500">{{ availablePlayers.length }}</span>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          class="h-3 w-3 text-gray-500" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+          fill="none"
+        >
+          <path 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            stroke-width="1.5" 
+            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" 
+          />
+        </svg>
+      </div>
     </div>
 
     <div class="grid grid-cols-3 gap-1">

@@ -12,7 +12,7 @@
 
     <div v-if="teamsGenerated" class="mt-3 grid grid-cols-2 gap-2 sm:gap-4">
       <div>
-        <h3 class="text-xs sm:text-sm font-medium text-gray-700 mb-1">Equipo A ({{ teamA.length }})</h3>
+        <h3 class="text-xs sm:text-sm font-medium text-gray-700 mb-1"> Equipo A </h3>
         <div class="space-y-1">
           <div
             v-for="(player, index) in teamA"
@@ -26,7 +26,7 @@
       </div>
 
       <div>
-        <h3 class="text-xs sm:text-sm font-medium text-gray-700 mb-1">Equipo B ({{ teamB.length }})</h3>
+        <h3 class="text-xs sm:text-sm font-medium text-gray-700 mb-1"> Equipo B </h3>
         <div class="space-y-1">
           <div
             v-for="(player, index) in teamB"

@@ -6,10 +6,12 @@ import TeamGenerator from './components/TeamGenerator.vue'
 
 <template>
   <div class="relative min-h-screen overflow-x-hidden">
-    <!-- Fondo fijo con blur y detrás del contenido -->
-    <div class="fixed inset-0 w-full h-full custom-bg blur-sm z-[-1]"></div>
+    <!-- Fondo simulado como "fijo", real fijo, y sin parpadeos -->
+    <div class="fixed top-0 left-0 w-screen h-screen z-[-1]">
+      <div class="w-full h-full custom-bg blur-sm"></div>
+    </div>
 
-    <!-- Contenido encima del fondo -->
+    <!-- Contenido -->
     <div class="relative z-10 p-2 sm:p-4 md:p-6">
       <div class="max-w-screen-xl mx-auto">
         <header class="mb-3 sm:mb-4 mt-2 sm:mt-3 md:mb-8 text-center">

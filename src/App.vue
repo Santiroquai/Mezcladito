@@ -8,7 +8,7 @@ import TeamGenerator from './components/TeamGenerator.vue'
   <div class="relative min-h-screen overflow-x-hidden">
     <!-- Fondo simulado como "fijo", real fijo, y sin parpadeos -->
     <div class="fixed top-0 left-0 w-screen h-screen z-[-1]">
-      <div class="w-full h-full custom-bg blur-sm"></div>
+      <div class="w-full h-full custom-bg blur-xs"></div>
     </div>
 
     <!-- Contenido -->

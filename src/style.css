@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+.custom-bg {
+  @apply bg-cover bg-center; /* Clases de Tailwind para ajustes */
+  background-image: url('/grass.jpg');
+}

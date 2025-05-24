@@ -6,7 +6,7 @@ import TeamGenerator from './components/TeamGenerator.vue'
 
 <template>
   <div class="bg-green-600 relative min-h-screen overflow-x-hidden">
-    <div class="absolute inset-0 bg-[url('/grass.jpg')] bg-cover bg-center bg-fixed blur-sm"></div>
+    <div class="absolute inset-0 custom-bg w-full bg-fixed blur-sm"></div>
     
     <div class="relative p-2 sm:p-4 md:p-6">
       <div class="max-w-screen-xl mx-auto">

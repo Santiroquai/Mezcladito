@@ -11,7 +11,7 @@ const togglePlayerSelection = (id) => {
 </script>
 
 <template>
-  <div class="bg-zinc-100 rounded-lg shadow-sm p-2 sm:p-4">
+  <div class="bg-zinc-200 rounded-lg shadow-sm p-2 sm:p-4">
     <h2 class="text-base sm:text-lg font-semibold text-gray-800 mb-2">Mezcladito de hoy ({{ store.selectedPlayers.length }}/10)</h2>
     
     <div v-if="store.selectedPlayers.length > 0" class="grid grid-cols-2 gap-1">

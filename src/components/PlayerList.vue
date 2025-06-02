@@ -24,6 +24,7 @@ const addNewPlayer = () => {
     newPlayerName.value = ''
   }
 }
+
 </script>
 
 <template>
@@ -45,25 +46,17 @@ const addNewPlayer = () => {
             type="checkbox" 
             class="sr-only peer" 
             :checked="isDark" 
-            @change="toggleTheme"
-          >
-          <div 
-            class="w-9 h-5 rounded-full transition-colors duration-300"
-            :class="{
-              'bg-blue-500': isDark,
-              'bg-zinc-700': !isDark
-            }"
-          >
-            <div 
-              class="absolute top-[2px] w-4 h-4 bg-white rounded-full transition-transform duration-300"
-              :class="{
-                'translate-x-[18px]': isDark,
-                'translate-x-[2px]': !isDark
-              }"
-            ></div>
+            @change="toggleTheme">
+          
+          <div class="relative mt-2 w-9.5 h-5.5 bg-gray-500 rounded-full peer peer-checked:bg-blue-500 transition-colors duration-300">
           </div>
+          
+          <div class="absolute top-[10px] left-[2px] w-4.5 h-4.5 bg-zinc-600 rounded-full transition-transform duration-300 peer-checked:translate-x-[16px]">
+          </div>
+
         </label>
       </div>
+      
     </div>
 
 

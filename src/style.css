@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-media --dark (prefers-color-scheme: dark);
 
 .custom-bg {
   @apply bg-cover bg-center min-h-screen;

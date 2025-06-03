@@ -16,7 +16,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <!-- Contenedor global: ocupa toda la altura de pantalla -->
+  
   <div class="flex flex-col min-h-screen">
     
     <!-- Fondo desenfocado detrás -->
@@ -25,10 +25,10 @@ onMounted(() => {
     </div>
 
     <!-- Contenido principal que crece para empujar el footer -->
-    <main class="flex-grow p-2 sm:p-4 md:p-6 w-full">
+    <main class="flex-grow p-4 sm:p-4 md:p-6 w-full">
       <div class="max-w-screen-xl mx-auto">
         <!-- Contenido en grid -->
-        <div class="grid gap-3 sm:gap-4 md:gap-8 w-full md:max-w-2xl mx-auto">
+        <div class="grid gap-3 sm:gap-4 md:gap-5 w-full md:max-w-2xl mx-auto">
           <PlayerList />
           <SelectedPlayers />
           <TeamGenerator />

@@ -16,7 +16,7 @@ const generateTeams = () => {
 </script>
 
 <template>
-  <div class="bg-white rounded-lg shadow-sm p-3 sm:p-4 mb-6 dark:bg-zinc-700 dark:text-white">
+  <div class="bg-white rounded-lg shadow-sm p-3 sm:p-4 mb-9 dark:bg-zinc-700 dark:text-white">
     <h2 class="text-base sm:text-lg font-semibold text-gray-800 mb-2 dark:text-gray-300">Sortear Equipos</h2>
 
     <button

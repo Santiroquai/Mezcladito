@@ -28,14 +28,18 @@ const addNewPlayer = () => {
 </script>
 
 <template>
-   <div class="rounded-lg shadow-sm overflow-hidden bg-white dark:bg-zinc-700 dark:text-white">
+  <div class="rounded-lg shadow-sm overflow-hidden bg-white dark:bg-zinc-700 dark:text-white">
     <div class="bg-zinc-600 text-white py-2 px-4 h-13 flex items-center">
       <!-- Contenedor absoluto para centrado perfecto -->
       <div class="absolute left-0 right-0 flex justify-center items-center pointer-events-none">
         <div class="flex items-center">
-          <FutbolIcon class="text-zinc-800 bg-white dark:bg-zinc-600 rounded-2xl mr-2" />
+
+          <FutbolIcon class="text-zinc-800 bg-zinc-100 dark:bg-zinc-300 rounded-2xl mr-2" />
+
           <h1 class="text-xl sm:text-2xl md:text-3xl font-bold dark:text-gray-300">Mezcladito</h1>
-          <FutbolIcon class="text-zinc-800 bg-white dark:bg-zinc-600 rounded-2xl ml-2" />
+
+          <FutbolIcon class="text-zinc-800 bg-zinc-100 dark:bg-zinc-300 rounded-2xl ml-2" />
+
         </div>
       </div>
 
@@ -48,10 +52,10 @@ const addNewPlayer = () => {
             :checked="isDark" 
             @change="toggleTheme">
           
-          <div class="relative mt-2 w-9.5 h-5.5 bg-gray-500 rounded-full peer peer-checked:bg-blue-500 transition-colors duration-300">
+          <div class="relative mt-2 w-9.5 h-5.5 bg-blue-400 rounded-full peer peer-checked:bg-gray-500 transition-colors duration-600">
           </div>
           
-          <div class="absolute top-[10px] left-[2px] w-4.5 h-4.5 bg-zinc-600 rounded-full transition-transform duration-300 peer-checked:translate-x-[16px]">
+          <div class="absolute top-[10px] left-[2px] w-4.5 h-4.5 bg-zinc-600 rounded-full transition-transform duration-400 peer-checked:translate-x-[16px]">
           </div>
 
         </label>
@@ -116,7 +120,7 @@ const addNewPlayer = () => {
           v-model="newPlayerName"
           @keyup.enter="addNewPlayer"
           placeholder="Añadir jugador"
-          class="flex-1 px-2 py-1 text-xs sm:text-sm border border-gray-300 dark:border-gray-700 rounded-l dark:bg-gray-800 dark:text-zinc-300 focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-transparent"
+          class="flex-1 px-2 py-1 text-xs sm:text-sm border border-gray-300 dark:border-gray-800 rounded-l dark:bg-gray-800 dark:text-zinc-300 focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-transparent"
         >
         <button 
           @click="addNewPlayer"

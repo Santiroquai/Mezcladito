@@ -5,16 +5,25 @@ export const useThemeStore = defineStore('theme', () => {
   const isDark = ref(false)
   
   // Inicializa desde localStorage o preferencia del sistema
-  function initTheme() {
-    const savedTheme = localStorage.getItem('theme')
-    if (savedTheme) {
-      isDark.value = savedTheme === 'dark'
-    } else {
-      // Solo usa preferencia del sistema si no hay valor guardado
-      isDark.value = window.matchMedia('(prefers-color-scheme: dark)').matches
+    async function initTheme() {
+      return new Promise((resolve) => {
+        const savedTheme = localStorage.getItem('theme')
+        if (savedTheme) {
+          isDark.value = savedTheme === 'dark'
+        } else {
+          // Usamos un listener para preferencia del sistema
+          const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+          isDark.value = mediaQuery.matches
+          // Opcional: listener para cambios futuros
+          mediaQuery.addEventListener('change', (e) => {
+            isDark.value = e.matches
+            applyTheme()
+          })
+        }
+        applyTheme()
+        resolve()
+      })
     }
-    applyTheme()
-  }
   
   function toggleTheme() {
     isDark.value = !isDark.value

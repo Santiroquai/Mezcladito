@@ -24,7 +24,7 @@ onMounted(() => {
     
     <div v-show="appLoaded" class="flex flex-col min-h-screen">
       <!-- Fondo desenfocado -->
-      <div class="fixed top-0 left-0 w-screen h-screen z-[-1]">
+      <div class="bg-gray-600 fixed top-0 left-0 w-screen h-screen z-[-1]">
         <div class="w-full h-full custom-bg blur-xs"></div>
       </div>
 

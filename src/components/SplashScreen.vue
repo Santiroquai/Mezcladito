@@ -23,7 +23,6 @@ onMounted(() => {
     v-show="isVisible"
     class="fixed inset-0 z-[9999] bg-green-400 dark:bg-gray-900 flex items-center justify-center"
   >
-    
     <div class="animate-[bounce_2s_infinite]">
       <img 
         src="/futbol-regular-ng.svg" 

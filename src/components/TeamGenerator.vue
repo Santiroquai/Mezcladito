@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { usePlayersStore } from '../stores/players'
+import ShareIcon from './Icons/ShareIcon.vue'
 
 const store = usePlayersStore()
 
@@ -13,6 +14,18 @@ const teamsGenerated = computed(() => teamA.value.length === 5 && teamB.value.le
 const generateTeams = () => {
   store.generateTeams()
 }
+
+const whatsappMessage = computed(() => {
+  const teamAText = teamA.value.map((p, i) => `${i + 1}. ${p.name}`).join('\n')
+  const teamBText = teamB.value.map((p, i) => `${i + 1}. ${p.name}`).join('\n')
+
+  return `⚽ *Equipos* ⚽\n\n🔵 *Equipo A:*\n${teamAText}\n\n🔴 *Equipo B:*\n${teamBText}`
+})
+
+const whatsappLink = computed(() =>
+  'https://wa.me/?text=' + encodeURIComponent(whatsappMessage.value)
+)
+
 </script>
 
 <template>
@@ -55,7 +68,22 @@ const generateTeams = () => {
           </div>
         </div>
       </div>
+
+      <div class="col-span-2 flex justify-end mt-2 mx-2 sm:mt-4">
+        <a
+          v-if="teamsGenerated"
+          :href="whatsappLink"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 text-blue-500 font-medium hover:underline transition"
+        >
+          <ShareIcon />
+          Compartir
+        </a>
+      </div>
+
     </div>
   </div>
+
 </template>
 

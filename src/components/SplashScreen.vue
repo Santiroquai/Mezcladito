@@ -13,7 +13,7 @@ onMounted(() => {
   
   setTimeout(() => {
     isVisible.value = false
-  }, 2500) 
+  }, 8200) 
 })
 </script>
 
@@ -26,12 +26,12 @@ onMounted(() => {
     <div class="animate-[bounce_2s_infinite]">
       <img 
         src="/futbol-regular-ng.svg" 
-        class="w-32 h-32 animate-[spin_3s_linear_infinite] hover:animate-ping block dark:hidden"
+        class="w-22 h-22 animate-[spin_2s_linear_infinite] hover:animate-ping block dark:hidden"
         alt="Mezcladito Logo (Light)"
       >
       <img 
         src="/futbol-regular-bl.svg" 
-        class="w-32 h-32 animate-[spin_3s_linear_infinite] hover:animate-ping hidden dark:block"
+        class="w-22 h-22 animate-[spin_2s_linear_infinite] hover:animate-ping hidden dark:block"
         alt="Mezcladito Logo (Dark)"
       >
     </div>

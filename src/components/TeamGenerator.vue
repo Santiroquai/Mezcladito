@@ -19,7 +19,7 @@ const whatsappMessage = computed(() => {
   const teamAText = teamA.value.map((p, i) => `${i + 1}. ${p.name}`).join('\n')
   const teamBText = teamB.value.map((p, i) => `${i + 1}. ${p.name}`).join('\n')
 
-  return `⚽ *Equipos* ⚽\n\n🔵 *Equipo A:*\n${teamAText}\n\n🔴 *Equipo B:*\n${teamBText}`
+  return `🏆 *Equipos* 🏆\n\n🟦 *Equipo A:*\n${teamAText}\n\n🟥 *Equipo B:*\n${teamBText}`
 })
 
 const whatsappLink = computed(() =>

@@ -68,10 +68,10 @@ const addNewPlayer = () => {
       <div class="flex justify-between items-center mb-2">
         <h2 class="text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-300">Jugadores</h2>
         <div class="flex items-center gap-1">
-          <span class="text-xs text-gray-500">{{ availablePlayers.length }}</span>
+          <span class="text-xs text-gray-500 dark:text-gray-300">{{ availablePlayers.length }}</span>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
-          class="h-3 w-3 text-gray-500" 
+          class="h-3 w-3 text-gray-500 dark:text-gray-300" 
           viewBox="0 0 24 24" 
           stroke="currentColor"
           fill="none"
